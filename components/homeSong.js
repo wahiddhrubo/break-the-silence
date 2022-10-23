@@ -14,16 +14,16 @@ export default function Song({
 	const { playSong } = useContext(BreakTheSilenceContext);
 	const styles = {
 		Wrapper:
-			"text-left cursor-pointer shadow-3xl mx-auto border-1 h-[80px] bg-[#121212] lg:w-[950px]  md:w-[750px] w-[350px] my-10 flex gap-5 relative transition-all font-normal text-base text-[#b3b3b3]  group",
+			"text-left px-5 cursor-pointer shadow-3xl mx-auto border-1 h-[80px] bg-[#121212] lg:w-[950px]  md:w-[750px] w-[350px] my-10 flex gap-5 relative transition-all font-normal text-base text-[#b3b3b3]  group",
 		index: "w-[20px]",
 		title: "w-[300px] font-semibold my-auto h-[28px] text-lg text-white",
 		singer: "w-1/4 my-auto group-hover:text-white h-[28px] ",
 		date: "w-[10%] my-auto h-[28px] group-hover:text-white",
-		link: "p-2 px-5 border-white border-[1px] hover:bg-green-900  my-auto",
+		link: "p-2 px-5 lg:block border-white hidden border-[1px] hover:bg-green-900  my-auto",
 		icon: "text-white  w-[35px] h-[35px] invisible transition-all group-hover:visible ",
 		iconDiv: "absolute left-2 top-[24px] ",
 		iconWrapper:
-			"absolute top-[26px] left-5 visible group-hover:invisible  ",
+			"absolute inset-0 my-auto  h-[25px] left-5  visible group-hover:invisible  lg:block ",
 	};
 
 	return (

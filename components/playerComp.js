@@ -43,23 +43,24 @@ export default function PlayerComp() {
 		year: "2022",
 	};
 	const styles = {
-		Wraper: "w-screen  p-2  h-[120px] shadow-2xl bg-[#121212] absolute bottom-0 sticky ",
+		Wraper: "w-screen  p-2  lg:h-[120px] h-[85px] shadow-2xl bg-[#121212] absolute bottom-0 sticky ",
 		flexWraper:
-			"flex  gap-10 w-[550px]  lg:w-[1050px] md:w-[650px]  mx-auto ",
-		imgDiv: "flex gap-3 p-5",
-		image: "w-[70px] h-[70px] text-[12px] text-[#b3b3b3] ",
+			"flex  lg:gap-10 w-[350px] gap-5  lg:w-[1050px] md:w-[650px]  mx-auto ",
+		imgDiv: "flex gap-3  lg:p-5 p-2",
+		image: "lg:w-[70px] lg:h-[70px] hidden lg:block w-[45px] h-[45px] text-[12px] text-[#b3b3b3] ",
 		title: "text-[16px] whitespace-nowrap font-semibold text-white ",
-		controlDiv: "w-1/2 my-auto",
-		controls: "flex gap-3 text-center mx-auto w-[215px] ",
+		controlDiv: "lg:w-1/2 w-[175px]  my-auto",
+		controls:
+			"flex lg:gap-3 gap-1 text-center mx-auto lg:w-[215px] w-[150px] ",
 		newSongProgress:
 			"w-full  outline-0  cursor-pointer text-black form-range visited:bg-black bg-white h-[2px]",
 		volmeDiv: "flex group gap-2 my-auto",
 		volume: "w-[80%] outline-0 my-auto cursor-pointer text-black  bg-white h-[2px]",
 		titleDiv: "text-[#b3b3b3] text-[12px] my-auto",
-		icons: "block hover:text-green-dark w-[32px] h-[32px] text-[#b3b3b3]  ",
+		icons: "block hover:text-green-dark lg:w-[32px] lg:h-[32px] w-[27px] h-[27px] text-[#b3b3b3]  ",
 		volumeIcon:
 			"block group-hover:text-green-dark w-[28px] h-[28px] text-[#b3b3b3]  ",
-		play: "block p-[6px] w-[38px] hover:scale-[1.1] transition-all h-[38px] hover:bg-green-dark rounded-full text-black bg-white ",
+		play: "block p-[6px] lg:w-[38px] w-[28px] hover:scale-[1.1] transition-all h-[28px] lg:h-[38px] hover:bg-green-dark rounded-full text-black bg-white ",
 	};
 	const activeLoop = loop ? "green" : "";
 	const activeShuffle = !loop ? "green" : "";
@@ -140,7 +141,7 @@ export default function PlayerComp() {
 								max="100"
 								onChange={(e) => onProgressChange(e)}
 								value={progress}
-								class={styles.newSongProgress}
+								className={styles.newSongProgress}
 							/>
 						</div>
 						<div className={styles.volmeDiv}>
@@ -163,7 +164,6 @@ export default function PlayerComp() {
 			<audio
 				id="audio-element"
 				hidden
-				playsInline
 				onTimeUpdate={(e) => updateProgress(e)}
 				onEnded={PlayNext}
 			/>

@@ -85,7 +85,8 @@ export default function Album() {
 	};
 
 	const styles = {
-		songDiv: "relative pb-10 isolate bg-[#121212] lg:min-h-[700px] ",
+		wrapper: "bg-[#121212] h-min-screen",
+		songDiv: "relative pb-10 isolate  lg:min-h-[700px] ",
 		songIsolation: `w-full blur-2xl opacity-20 absolute h-[250px] z-[-2] bg-gradient-to-b from-[${
 			album ? album.color : "white"
 		}] to-[#00000099]`,
@@ -107,7 +108,7 @@ export default function Album() {
 				/>
 			)}
 			{album ? (
-				<div>
+				<div className={styles.Wrapper}>
 					<AlbumHeader
 						album={album}
 						totalDuration={totalDuration}
@@ -152,6 +153,7 @@ export default function Album() {
 							{songsDta &&
 								songsDta.map((s) => (
 									<SongDiv
+										key={songsDta.indexOf(s) + 1}
 										title={s.name}
 										index={songsDta.indexOf(s) + 1}
 										singer={s.singer}

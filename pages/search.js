@@ -22,7 +22,7 @@ export default function MyAlbum() {
 			<div className="text-center text-5xl leading-normal font-semibold">
 				Your Searched Albums
 			</div>
-			<div className="lg:mr-auto lg:ml-[50px] text-center text-lg font-normal mx-auto h-min-screen lg:w-full flex flex-wrap gap-20 mx-auto w-[250px] mt-[80px] ">
+			<div className="lg:mr-auto lg:ml-[50px] text-center text-lg font-normal mx-auto h-min-screen lg:w-full flex flex-wrap lg:gap-20 mx-auto w-[320px] justify-between gap-2 mt-[80px] ">
 				{albums &&
 					albums.map((a) => (
 						<div key={a.attributes.ipfs}>

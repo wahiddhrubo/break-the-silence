@@ -4,7 +4,7 @@ import { BiPlay } from "react-icons/bi";
 export default function Card({ img, title, singer, year, id }) {
 	const styles = {
 		wrapper:
-			"lg:w-[210px] md:w-[150px] w-[200px] text-sm rounded-[10px] transition-all bg-[#181818] hover:bg-[#282828] p-[15px] cursor-pointer group shadow-2xl ",
+			"lg:w-[210px] md:w-[150px] w-[150px] text-sm rounded-[10px] transition-all bg-[#181818] hover:bg-[#282828] p-[15px] cursor-pointer group shadow-2xl ",
 		img: "!w-[150px]  rounded-[5px] shadow-xl my-5",
 		title: "font-bold",
 		singer: "my-2",

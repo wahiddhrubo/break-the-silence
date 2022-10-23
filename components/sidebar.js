@@ -4,7 +4,7 @@ import Button from "../components/button.js";
 import Link from "next/link";
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function sidebar() {
+export default function Sidebar() {
 	const [srch, setSrch] = useState();
 	const {
 		formattedAccount,
@@ -17,10 +17,7 @@ export default function sidebar() {
 	return (
 		<div className="hidden md:block lg:block">
 			{" "}
-			<span
-				className="absolute text-white text-4xl top-5 left-4 cursor-pointer"
-				onclick="openSidebar()"
-			></span>
+			<span className="absolute text-white text-4xl top-5 left-4 cursor-pointer"></span>
 			<div className="sidebar relative top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-black">
 				<div className="fixed">
 					<div className="text-gray-100 text-xl">
@@ -33,10 +30,7 @@ export default function sidebar() {
 								<h1 className="font-bold text-gray-200 text-[15px] ml-3">
 									TailwindCSS
 								</h1>
-								<i
-									className="bi bi-x cursor-pointer ml-28 lg:hidden"
-									onclick="openSidebar()"
-								></i>
+								<i className="bi bi-x cursor-pointer ml-28 lg:hidden"></i>
 							</div>
 						</Link>{" "}
 						<hr className="my-2 bg-gray-600 h-[1px] w-full" />

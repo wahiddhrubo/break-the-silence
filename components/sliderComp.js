@@ -16,7 +16,7 @@ export default function SliderComponent({ divs }) {
           size={50}
           className={
             styles.icons +
-            "slick-arrow-left left-[-70px] top-[320px] z-10" +
+            "slick-arrow-left lg:left-[-70px] lg:top-[320px] top-[250px] z-10" +
             (currentSlide === 0 ? " slick-disabled" : "")
           }
           aria-disabled={currentSlide === 0 ? true : false}
@@ -32,7 +32,7 @@ export default function SliderComponent({ divs }) {
         size={50}
         className={
           styles.icons +
-          "slick-arrow-right relative left-[325px] top-[-250px]" +
+          "slick-arrow-right relative left-[300px] lg:left-[325px] top-[-240px] lg:top-[-250px]" +
           (currentSlide === slideCount - 1 ? " slick-disabled" : "")
         }
         aria-disabled={currentSlide === slideCount - 1 ? true : false}
@@ -52,12 +52,15 @@ export default function SliderComponent({ divs }) {
     nextArrow: <SlickArrowRight />,
   };
   return (
-    <div className="w-[300px]">
+    <div className="lg:w-[300px]">
       <Slider {...settings}>
         {divs &&
           divs.map((b) => (
             <div key={b.id}>
-              <div key={b.id} className="w-[300px]">
+              <div
+                key={b.id}
+                className="lg:w-[300px] mx-auto lg:mx-0 w-[250px]"
+              >
                 <Link
                   key={b.id}
                   href={{
@@ -68,7 +71,7 @@ export default function SliderComponent({ divs }) {
                     src={b.attributes.potraitImg}
                     width={300}
                     height={500}
-                    className="object-cover cursor-pointer"
+                    className="object-cover  cursor-pointer"
                   />
                 </Link>
               </div>

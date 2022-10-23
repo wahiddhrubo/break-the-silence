@@ -7,11 +7,11 @@ export default function Loader() {
 			className={` bg-[#181818] z-[20] sticky ml-[-300px] text-center h-screen  w-screen text-center text-3xl font-semibold text-[${primaryColor}]`}
 		>
 			{" "}
-			<div className="absolute inset-0 m-auto w-[250px] h-[250px] ">
+			<div className="absolute inset-0 m-auto w-[150px] h-[150px] ">
 				<div>
 					<HashLoader
 						className="place-self-center"
-						size={250}
+						size={150}
 						color={primaryColor}
 					/>
 				</div>
